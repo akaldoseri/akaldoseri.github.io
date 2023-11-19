@@ -1,5 +1,7 @@
 ## Unreleased
 
+s
+
 ### Bug Fixes
 
 - Fix unlisted YouTube video embeds in documentation/test sites. [#3649](https://github.com/mmistakes/minimal-mistakes/issues/3649)
