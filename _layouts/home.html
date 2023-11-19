@@ -4,18 +4,199 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<h2>About me</h2>
+<p style="font-size:0.75em">
+  I am a PhD student in the school of computer science at University of Birmingham, United Kingdom, and a lecturer at
+  University of Bahrain, Bahrain. My research focus on offensive security across different platforms: Computers, Mobiles
+  (specially Android OS) and web browsers. I discovered and reported several security vulnerabilities that affect
+  products belong to Google, Samsung, Huawei and Opera. I obtained my Msc in advanced computer science at University of
+  Birmingham in December 2017.
+</p>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
+
+<h2>Publication</h2>
+<table>
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><b>2023</b></td>
+      <td>
+        <div> 
+          <b> <a class="pub-title" href="/modelling_android_ra/" style="text-decoration:none">Symbolic modelling of remote attestation protocols for device and app integrity on Android </a> </b> <br>
+          <b>Abdulla Aldoseri</b>,  Tom Chothia , José Moreira and David Oswald <br>
+          <em>The 18th ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023)</em>, 2023. <br/>
+          <span style="font-size:0.75em;"> <i style='color:#e74c3c;' class="fas fa-fw fa-map-marker-alt"></i>  Melbourne, Australia </span> <br/>
+            <span style="font-size:0.75em; color:gray;"> <i class="fas fa-bug"></i> 
+              <a href='https://issuetracker.google.com/issues/205589624'>i-205589624 (Google) </a>
+            </span>
+           
+        </div>
+        
+      </td>
+    </tr>
+
+
+    <tr>
+      <td style="vertical-align: top;"><b>2022</b></td>
+      <td>
+        <div> 
+          <!-- <b> <a class="pub-title" href="/a-tale-of-four-gates/" style="text-decoration:none">A Tale of Four Gates: Privilege Escalation and Permission Bypasses on Android through App Components</a> </b> <br> -->
+          <b> <a class="pub-title" href="files/esorics2022.pdf" style="text-decoration:none">A Tale of Four Gates: Privilege Escalation and Permission Bypasses on Android Through App Components</a> </b> <br>
+          <b>Abdulla Aldoseri</b>, David Oswald, Robert Chiper <br>
+          <em>The 27th European Symposium on Research in Computer Security (ESORICS 2022)</em>, 2022. <br/>
+          <span style="font-size:0.75em;"> <i style='color:#e74c3c;' class="fas fa-fw fa-map-marker-alt"></i> Copenhagen, Denmark </span> <br/>
+            <span style="font-size:0.75em; color:gray;"> <i class="fas fa-bug"></i> 
+              <a href='https://nvd.nist.gov/vuln/detail/CVE-2020-26606'>CVE-2020-26606 (Samsung)</a>,
+              <a href='https://www.huawei.com/en/psirt/security-advisories/huawei-sa-20201202-01-smartphone-en'>CVE-2020-9119 (Huawei)</a> and
+              <a href='https://issuetracker.google.com/issues/175232797'>i-75232797 (Google) </a>
+            </span> <br/>
+            <span style="font-size:0.75em;"><a href='/a-tale-of-four-gates/'>Presentation and demo videos</a></span> 
+            <!-- <br/>
+            <a href="https://www.researchgate.net/profile/Abdulla-Aldoseri/publication/364029712_A_Tale_of_Four_Gates_-_Privilege_Escalation_and_Permission_Bypasses_on_Android_through_App_Components/links/6336b3af769781354ea83f9d/A-Tale-of-Four-Gates-Privilege-Escalation-and-Permission-Bypasses-on-Android-through-App-Components.pdf" class="nounderline"> 
+              <i class="fa fa-file-pdf-o" style="color:#bb0000;" title="PDF"></i> 
+            </a> 
+            <a href="files/systex22-abi-slides.pdf" class="nounderline"> 
+              <i class="fab fa-slideshare" style="color:#cc7000;" title="Slides"></i> 
+            </a> 
+            <a href="https://github.com/akaldoseri/a-tale-of-four-gates" class="nounderline"> 
+              <i class="fab fa-github" style="color:#171516;" title="Code"></i> 
+            </a> 
+            <a class="collapsible nounderline"> 
+              <i class="fas fa-quote-right" title="Cite"></i> 
+            </a>
+          <div class="content" style="display: none; font-size: .75em;">
+            <pre style="white-space: pre-wrap;">
+              @inproceedings{aldoseri2022tale,
+                title={A Tale of Four Gates: Privilege Escalation and Permission Bypasses on Android Through App Components},
+                author={Aldoseri, Abdulla and Oswald, David and Chiper, Robert},
+                booktitle={Computer Security--ESORICS 2022: 27th European Symposium on Research in Computer Security, Copenhagen, Denmark, September 26--30, 2022, Proceedings, Part II},
+                pages={233--251},
+                year={2022}
+              }
+              
+            </pre>
+          </div> -->
+        </div>
+        
+      </td>
+    </tr>
+    <tr>
+
+        <td style="vertical-align: top;"></td>
+        <td>
+          <div> 
+            <b> <a class="pub-title" href="/insecure/" style="text-decoration:none">
+              insecure://Vulnerability Analysis of URI Scheme Handling in Android Mobile Browsers</a> </b> <br>
+            <b>Abdulla Aldoseri</b>, David Oswald <br>
+            <em>Workshop on Measurements, Attacks, and Defenses for the Web (MADWeb 2022)</em>, 2022. <br/>
+            <span style="font-size:0.75em;"> <i style='color:#e74c3c;' class="fas fa-fw fa-map-marker-alt"></i> San Diego, California, US </span><br/>
+
+              <span style="font-size:0.75em; color:gray;"> <i class="fas fa-bug"></i> 
+                <a href='https://security.opera.com/en/cross-site-scripting-in-ofa-opera-security-advisories/'>CVE-2020-6159 (Opera)</a>,
+                <a href='https://security.samsungmobile.com/serviceWeb.smsb?year=2021&month=6'> CVE-2021-25419 (Samsung)</a>,
+                <a href='https://security.samsungmobile.com/serviceWeb.smsb?year=2021&month=1'> CVE-2021-25348 (Samsung)</a>,
+                <a href='https://security.samsungmobile.com/serviceWeb.smsb?year=2021&month=6'> CVE-2021-25417 (Samsung)</a>,
+                <a href='https://bugs.chromium.org/p/chromium/issues/detail?id=1154353'>(i-1154353) (Google) </a>
+              </span><br/>
+              <span style="font-size:0.75em; color:gray;"> <i class="fas fa-star" style="color:#f1c40f;"></i> Best paper award</span>
+    </tr>
+   
+    <tr>
+
+      <td style="vertical-align: top;"><b>2019</b></td>
+      
+      <td>
+        <div> 
+          <b> <a class="pub-title" href="#" style="text-decoration:none">
+            A Tale of Two Worlds: Assessing the Vulnerability of Enclave Shielding Runtimes </a> </b> <br>
+           Jo Van Bulck, David Oswald, Eduard Marin, <b>Abdulla Aldoseri</b>, Flavio D. Garcia, Frank Piessens  <br>
+          <em>26th ACM Conference on Computer and Communications Security (ACM CCS 2019)</em>, 2019. <br/>
+          <span style="font-size:0.75em;"> <i style='color:#e74c3c;' class="fas fa-fw fa-map-marker-alt"></i> London, UK </span><br/>
+
+            <span style="font-size:0.75em; color:gray;"> <i class="fas fa-bug"></i> 
+              CVE-2018-3626, CVE-2019-14565, CVE-2019-0876, CVE-2019-1369, CVE-2019-1370
+            </span>
+        </tr>
+
+  </tbody>
+</table>
+
+
+
+<h2>Professional Certificates</h2>
+<table>
+  <tbody>
+
+
+    
+
+    <tr>
+      <td style="vertical-align: top;"><b></b></td>
+      <td style="width:100%">
+        <div> 
+          <b> <a class="pub-title" href="#" style="text-decoration:none">Malware Reverse Engineering</a> </b> <br>
+          <em>Kaspersky Academy/ Kaspersky lab</em> <br/>
+          <span style="font-size:0.75em; color:gray;"> <i class="fas fa-star" style="color:#f1c40f;"></i> Certified</span>
+ 
+        </div>
+        
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align: top;"><b></b></td>
+      <td>
+        <div> 
+          <b> <a class="pub-title" href="#" style="text-decoration:none">Security Monitoring and Cyber Threat Hunting</a> </b> <br>
+          <em>Kaspersky Academy/ Kaspersky lab</em> <br/>
+          <span style="font-size:0.75em; color:gray;"> <i class="fas fa-star" style="color:#f1c40f;"></i> Certified</span>
+            
+        </div>
+        
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <td style="vertical-align: top;"><b></b></td>
+      <td>
+        <div> 
+          <b> <a class="pub-title" href="#" style="text-decoration:none">Palo Alto Networks Certified Academy Instructor</a> </b> <br>
+          <em>Palo Alto Networks Academy</em> <br/>
+          <span style="font-size:0.75em; color:gray;"> <i class="fas fa-star" style="color:#f1c40f;"></i> Certified</span>
+        </div>
+        
+      </td>
+    </tr>
+
+
+    <tr>
+      <td style="vertical-align: top;"><b></b></td>
+      <td>
+        <div> 
+          <b> <a class="pub-title" href="#" style="text-decoration:none">Developing ASP.NET MVC Application (70-486)</a> </b> <br>
+          <em>Microsoft</em> <br/>
+          <span style="font-size:0.75em; color:gray;"> <i class="fas fa-star" style="color:#f1c40f;"></i> Certified</span>
+        </div>
+        
+      </td>
+    </tr>
+   
+
+  </tbody>
+</table>
+
+<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3> -->
+
+<!-- {% if paginator %}
+{% assign posts = paginator.posts %}
 {% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+{% assign posts = site.posts %}
+{% endif %} -->
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
+  {% include archive-single.html type=entries_layout %}
   {% endfor %}
 </div>
 

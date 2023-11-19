@@ -1,0 +1,103 @@
+---
+permalink: /a-tale-of-four-gates/
+title: "A Tale of Four Gates - Privilege Escalation and Permission Bypasses on Android through App Components"
+excerpt: "A Tale of Four Gates - Privilege Escalation and Permission Bypasses on Android through App Components"
+last_modified_at: 2023-01-01T11:59:26-04:00
+---
+
+<br/>
+<a style='font-size:0.75em;text-decoration: none' href="https://raw.githubusercontent.com/akaldoseri/papers/main/A_Tale_of_Four_Gates__Privilege_Escalation_and_Permission_Bypasses_on_Android_through_App_Components.pdf" class="page__taxonomy-item" rel="tag">Read paper</a>
+<a style='font-size:0.75em;text-decoration: none' href="/_files/A_Tale_of_Four_Gates__Privilege_Escalation_and_Permission_Bypasses_on_Android_through_App_Components_short.pdf" class="page__taxonomy-item" rel="tag">Read paper (Short)</a>
+<a style='font-size:0.75em;text-decoration: none' href="/_files/4gates_slides.pdf" class="page__taxonomy-item" rel="tag">Slides</a>
+<a style='font-size:0.75em;text-decoration: none' href="https://github.com/akaldoseri/a-tale-of-four-gates" class="page__taxonomy-item" rel="tag">View on Github</a>
+
+<br/><br/>
+<p style="font-size:0.75em">
+    A scientific research paper discusses novel exploits in Android Multi user feature and background service protection.
+    <br/>
+    <br/>
+    <b>Presented by:</b> <b>Abdulla Aldoseri</b>  ·  <a href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/oswald-david.aspx">Prof. David Oswald</a>  ·  Robert Chiper
+</p>
+
+
+<h2>Abstract</h2>
+<p style="font-size:0.75em">
+    Android apps interact and exchange data with other apps
+    through so-called app components. Previous research has shown that
+    app components can cause application-level vulnerabilities, for example
+    leading to data leakage across apps. Alternatively, apps can (intentionally
+    or accidentally) expose their permissions (e.g. for camera and microphone)
+    to other apps that lack these privileges. This causes a confused deputy
+    situation, where a less privileged app exposes its app components, which
+    use these permissions, to the victim app. While previous research mainly
+    focused on these issues, less attention has been paid to how app components can affect the security and privacy guarantees of Android OS. In
+    this paper, we demonstrate two according vulnerabilities, affecting recent
+    Android versions. First, we show how app components can be used to
+    leak data from and, in some cases, take full control of other Android
+    user profiles, bypassing the dedicated lock screen. We demonstrate the
+    impact of this vulnerability on major Android vendors (Samsung, Huawei,
+    Google and Xiaomi). Secondly, we found that app components can be
+    abused by spyware to access sensors like the camera and the microphone
+    in the background up to Android 10, bypassing mitigations specifically
+    designed to prevent this behaviour. Using a two-app setup, we find that
+    app components can be invoked stealthily to e.g. periodically take pictures
+    and audio recordings in the background. Finally, we present Four Gates
+    Inspector, our open-source static analysis tool to systematically detect
+    such issues for a large number of apps with complex codebases. Our tool
+    successfully identified exposed components issues in 34 out 5,783 apps
+    with average analysis runtime of 4.3 s per app and, detected both known
+    malware samples and unknown samples downloaded from the F-Droid
+    repository. We responsibly disclosed all vulnerabilities presented in this
+    paper to the affected vendors, leading to several CVE records and a
+    currently unresolved high-severity issue in Android 10 and earlier.
+
+    <br/><br/>
+    <b>Keywords:</b> Android · Application components · Multi-user · Sensors 
+
+</p>
+
+<h2>Presentation and Demo videos</h2>
+<p style="font-size:0.75em">
+
+    
+    
+    <iframe style="border-radius:5px;" width="560" height="315" src="https://www.youtube.com/embed/wpevOvgL6VI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br/> 
+    Presentation video
+    <br/><br/>
+
+    
+    <iframe style="border-radius:5px;" width="560" height="315" src="https://www.youtube.com/embed/f-x6s-CIt_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br/>
+    Access other users profiles via bypassing mutli-user security (Attack demo)
+    <br/><br/>
+
+    
+    <iframe style="border-radius:5px;" width="560" height="315" src="https://www.youtube.com/embed/IHFS05qxUOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br/>
+    Bypassing camera and mic restriction in the background on Android (Attack demo)
+
+
+</p>
+
+<h2>CVE</h2>
+
+
+
+
+<h2>Cite</h2>
+
+
+<div class="language-plaintext highlighter-rouge" style="color: #567482;background-color: #f3f6fa;border: solid 1px #dce6f0;font-size: 0.6em;">
+    <div class="highlight">
+        <pre class="highlight"><code>@inproceedings{aldoseri2022tale,
+  title={A Tale of Four Gates: Privilege Escalation and Permission Bypasses on Android Through App Components},
+  author={Aldoseri, Abdulla and Oswald, David and Chiper, Robert},
+  booktitle={Computer Security--ESORICS 2022: 27th European Symposium on Research in Computer Security, Copenhagen, Denmark, September 26--30, 2022, Proceedings, Part II},
+  pages={233--251},
+  year={2022}
+}</code></pre>
+    </div>
+</div>
+
+

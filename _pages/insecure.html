@@ -1,0 +1,144 @@
+---
+permalink: /insecure/
+title: "insecure:// Vulnerability Analysis of URI Scheme Handling in Android Mobile Browsers"
+excerpt: "insecure:// Vulnerability Analysis of URI Scheme Handling in Android Mobile Browsers"
+last_modified_at: 2023-01-01T11:59:26-04:00
+---
+
+<br/>
+<a style='font-size:0.75em;text-decoration: none;' href="https://www.ndss-symposium.org/wp-content/uploads/madweb2022_23003_paper.pdf" class="page__taxonomy-item" rel="tag">Read paper</a>
+<a style='font-size:0.75em;text-decoration: none;' href="https://www.policemc.gov.bh/magazine/darasat/2022/october/files/assets/common/downloads/publication.pdf#page=72" class="page__taxonomy-item" rel="tag"> قراءة البحث</a>
+<a style='font-size:0.75em;text-decoration: none' href="/_files/insecure_slides.pdf" class="page__taxonomy-item" rel="tag">Slides</a>
+<!-- <a style='font-size:0.75em' href="https://github.com/akaldoseri/a-tale-of-four-gates" class="page__taxonomy-item" rel="tag">View on Github</a> -->
+
+<br/><br/>
+<p style="font-size:0.75em">
+    A scientific research paper discusses novel exploits in Android mobile browsers.
+    <br/>
+    <br/>
+    <b>Presented by:</b> <b>Abdulla Aldoseri</b>  ·  <a href="https://www.birmingham.ac.uk/staff/profiles/computer-science/academic-staff/oswald-david.aspx">Prof. David Oswald</a>
+</p>
+
+
+<h2>Abstract</h2>
+<p style="font-size:0.75em">
+    Uniform Resource Identifier (URI) schemes instruct
+    browsers to conduct specific actions depending on the requested
+    scheme. Previous research has addressed numerous issues with
+    web URI schemes (e.g., http: and https:) both for desktop and
+    mobile browsers. Less attention has been paid to local schemes
+    (e.g., data: and file:), specifically for mobile browsers. In this work,
+    we examined the implementation of such schemes in Android
+    OS browsers, analysing the top-15 mobile browsers. As a result,
+    we discovered three vulnerability types that affect several major
+    browsers (including Google Chrome, Opera and Samsung Inter-
+    net). First, we demonstrate an URI sanitisation issue that leads
+    to a cross-site scripting attack via the JavaScript scheme. The
+    problem affects Chromium browsers including Chrome, Opera,
+    Edge, and Vivaldi. Second, we found a display issue in Samsung
+    Internet that allows abusing data URIs to impersonate origins
+    and protocols, posing a threat in the context of phishing attacks.
+    Finally, we discover a privilege escalation issue in Samsung’s
+    Android OS, leading to full read and write access to the internal
+    storage without user consent and bypassing the Android storage
+    permission. While this issue was originally discovered in the
+    file scheme of the Samsung browser, utilising a combination
+    of static and dynamic analysis, we traced the problem back to
+    an authorization issue in Knox Sensitive Data Protection SDK.
+    We then show that any app can abuse this SDK to obtain full
+    access to the internal storage without appropriate permission on
+    Samsung devices running Android 10. We responsibly disclosed
+    the vulnerabilities presented in this paper to the affected vendors,
+    leading to four CVEs and security patches in Chrome, Opera and
+    Samsung Internet browser.
+
+    <br/><br/>
+    <b>Keywords:</b> Android ·  mobile browsers ·  XSS ·  privilege escalation · URI schemes 
+
+</p>
+
+<h2>Presentation and Demo videos</h2>
+<p style="font-size:0.75em">
+
+    
+    <iframe style="border-radius:5px;" width="560" height="315" src="https://www.youtube.com/embed/6BkmM6Wfifk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+    <br/> 
+    Presentation video
+    <br/><br/>
+
+    
+    <iframe style="border-radius:5px;"  width="560" height="315" src="https://www.youtube.com/embed/smA3e2kHmgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br/>
+    Bypassing Android storage permission in Samsung devices (Attack demo)
+
+</p>
+
+<h2>CVE</h2>
+
+
+
+
+<h2>Cite</h2>
+
+<div class="language-plaintext highlighter-rouge" style="color: #567482;background-color: #f3f6fa;border: solid 1px #dce6f0;font-size: 0.6em;">
+    <div class="highlight">
+        <pre class="highlight"><code>@inproceedings{aldoseri2022insecure,
+  title={insecure://Vulnerability Analysis of URI Scheme Handling in Android Mobile Browsers},
+  author={Aldoseri, Abdulla and Oswald, David},
+  booktitle={Proceedings of the Workshop on Measurements, Attacks, and Defenses for the Web (MADWeb)},
+  year={2022}
+}</code></pre>
+    </div>
+</div>
+
+
+<h2>Press</h2>
+
+<p style="font-size:0.75em">
+    Coverage for our work via :
+    <ul style="font-size: 0.75em;">
+        <li>
+            <a target="_blank" href="https://www.bna.bh/.aspx?cms=q8FmFJgiscL2fwIzON1%2BDjsQa8UaQ3wqKyKwTwxVu%2FY%3D"  >
+                 Bahrain News Agency
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.uob.edu.bh/%d9%86%d8%a7%d9%84-%d8%ac%d8%a7%d8%a6%d8%b2%d8%a9-%d8%a3%d9%81%d8%b6%d9%84-%d8%a8%d8%ad%d8%ab-%d9%81%d9%8a-%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%b9%d8%a7%d9%84%d9%85%d9%8a-%d8%a8%d8%a7%d9%84%d9%88%d9%84/?lang=ar">
+                University of Bahrain
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://alwatannews.net/Bahrain/article/1010857/%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D8%A8%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86-%D9%8A%D9%83%D8%B4%D9%81-%D8%AB%D8%BA%D8%B1%D8%A7%D8%AA-%D8%A3%D9%85%D9%86%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%D9%8A%D9%86-%D9%84%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81-%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9">
+                Al Watan News
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://www.nabdn.com/post/13880403/%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D8%A8%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86-%D9%8A%D9%83%D8%B4%D9%81-%D8%AB%D8%BA%D8%B1%D8%A7%D8%AA-%D8%A3%D9%85%D9%86%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85">
+                Nabdn
+            </a>
+        </li>
+        <li>
+            <a target="_blank" target="_blank" href="https://pressbee.news/details/4751257/%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D8%A8%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86-%D9%8A%D9%83%D8%B4%D9%81-%D8%AB%D8%BA%D8%B1%D8%A7%D8%AA-%D8%A3%D9%85%D9%86%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85">
+                PressBee News
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://pressbee.net/show4751257.html?title=%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D8%A8%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86-%D9%8A%D9%83%D8%B4%D9%81-%D8%AB%D8%BA%D8%B1%D8%A7%D8%AA-%D8%A3%D9%85%D9%86%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%D9%8A%D9%86-%D9%84%D9%84">
+                PressBee
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://menafn.com/arabic/1104382208/%D9%86%D8%A7%D9%84-%D8%AC%D8%A7%D8%A6%D8%B2%D8%A9-%D8%A3%D9%81%D8%B6%D9%84-%D8%A8%D8%AD%D8%AB-%D9%81%D9%8A-%D9%85%D8%A4%D8%AA%D9%85%D8%B1-%D8%B9%D8%A7%D9%84%D9%85%D9%8A-%D8%A8%D8%A7%D9%84%D9%88%D9%84%D8%A7%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9-%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D8%A8%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86%D9%8A%D9%83%D8%B4%D9%81-%D8%AB%D8%BA%D8%B1%D8%A7%D8%AA-%D8%A3%D9%85%D9%86%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%D9%8A-%D8%A7%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81-%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9">
+                MENA FN
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://pressn.net/article/13880403?news=%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0-%D8%A8%D8%AC%D8%A7%D9%85%D8%B9%D8%A9-%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D9%86-%D9%8A%D9%83%D8%B4%D9%81-%D8%AB%D8%BA%D8%B1%D8%A7%D8%AA-%D8%A3%D9%85%D9%86%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%D9%8A%D9%86-%D9%84%D9%84%D9%87%D9%88%D8%A7%D8%AA%D9%81-%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9">
+                PressN
+            </a>
+        </li>
+
+    </ul>
+    
+
+</p>
